@@ -68,7 +68,7 @@ python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 Server starts at: **`http://127.0.0.1:8000`**
 
-Swagger UI: **`http://127.0.0.1:8000/docs`**
+Start the server in one terminal and use curl commands in another terminal to test.
 
 ---
 
@@ -138,6 +138,21 @@ GET /cache/stats
 
 ---
 
+## Testing with Terminal
+
+All examples below use **curl** commands. Start the server first, then open a new terminal and run these commands.
+
+### Test 1: Health Check (Server Running)
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+**Expected Output:**
+```json
+{"status":"ok"}
+```
+
 ## Sample Requests
 
 ### Example 1: Monthly Spending on Food
@@ -202,7 +217,7 @@ curl -X POST http://127.0.0.1:8000/query \
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                      Client (Postman/curl)                  │
+│                  Client (Terminal/curl)                     │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
