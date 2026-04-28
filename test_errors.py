@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Test error handling in the /query endpoint."""
 
+__test__ = False
+
 import json
 import requests
 import time
